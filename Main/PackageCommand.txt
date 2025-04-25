@@ -1,0 +1,16 @@
+pyinstaller --onefile --noconsole --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_Orange.png:.\Pets\MengJi_Orange.png" --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_Orange_Drag.png;.\Pets\MengJi_Orange_Drag.png" --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_White.png;.\Pets\MengJi_White.png" --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_White_Drag.png;.\Pets\MengJi_White_Drag.png" --add-data "C:\Project\PythonProject\LongSitReminderPet\Musics\Superman.mp3;.\Musics\Superman.mp3" LongSitReminderV1.5.0.py
+pyinstaller --noconsole --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_Orange.png:." --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_Orange_Drag.png;." --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_White.png;." --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\MengJi_White_Drag.png;." --add-data "C:\Project\PythonProject\LongSitReminderPet\Musics\Superman.mp3;." LongSitReminderV1.5.0.py
+pyinstaller --noconsole --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\*.png:." --add-data "C:\Project\PythonProject\LongSitReminderPet\Musics\Superman.mp3;." LongSitReminderV1.5.0.py
+pyinstaller --onefile --add-data "C:\Project\PythonProject\LongSitReminderPet\Pets\*.png:.\Pets" --add-data "C:\Project\PythonProject\LongSitReminderPet\Musics\Superman.mp3;.\Musics" LongSitReminderV1.5.0.py
+正确的打包代码
+pyinstaller --onefile --noconsole --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Pets\*.png:.\Pets" --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Musics\Superman.mp3;.\Musics" LongSitReminderV1.6.0.py
+不适用 --noconsole 模式的单文件打包
+pyinstaller --onefile --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Pets\*.png:.\Pets" --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Musics\Superman.mp3;.\Musics" LongSitReminderV1.6.0.py
+
+不使用 --onefile 模式和 --noconsole 模式
+pyinstaller --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Pets\*.png:.\Pets" --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Musics\Superman.mp3;.\Musics" LongSitReminderV1.6.0.py
+
+pyi-makespec --noconsole LongSitReminderV1.5.0.py
+
+最新带有 Icon 数据的打包代码
+pyinstaller --onefile --noconsole --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Pets\*.png:.\Pets" --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Icons\*.ico:.\Icons" --add-data "C:\Project\PythonProject\LongSitReminderPet\Main\Musics\Superman.mp3;.\Musics" LongSitReminderV1.7.0.py
